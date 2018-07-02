@@ -1,32 +1,36 @@
 # Getting Started
 
+This application is a canonical React application generated with `create-react-app`. The client code is under the `client` folder. The server code is in `index.js`.
+
 ## Getting the Code
 
 Clone directly from GitHub or from your Try Azure App Service instance.
 
 ## Running the Application Locally
 
-After cloning, install the necessary npm dependencies and use the `start` npm command to start a local development server.
+After cloning, install the necessary npm dependencies for both client and server:
 
 ```
 > npm install
+> cd client
+> npm install
+```
+
+Next, start the front-end development server and back-end API server. From the project root:
+
+```
 > npm start
 ```
 
-You should now see your application running.
-
-VSCode users can debug their application in Chrome directly from their editor by following these steps:
-
-1.  Run `npm start`, which starts your development server.
-2.  Inside VSCode, create a breakpoint and hit F5 to launch Chrome.
+You now have a front-end development server running on port 3000. The Express API is running on port 3001. Webpack takes care of proxying requests from the front-end development server to your API server as needed.
 
 ## Deploying to Azure
 
-[ Matt to Fill In]
-
-Use `npm run build` to create a production build in the `./dist` folder. Deploy that.
+[Matt to fill in?]
 
 # Contributing
+
+This sample's code is hosted on GitHub: https://github.com/microsoft/vscode-tas-react.
 
 This project welcomes contributions and suggestions. Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
