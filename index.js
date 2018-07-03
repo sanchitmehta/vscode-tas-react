@@ -8,10 +8,10 @@ const PORT = process.env.PORT || 3001;
 
 // Create the express routes
 let app = express();
-app.use(express.static('build'));
+app.use(express.static('client/build'));
 
 app.get('/', (req, res) => {
-  res.sendFile('build/index.html');
+  res.sendFile(__dirname + '/client/build/index.html');
 });
 
 app.get('/api', (req, res) => {

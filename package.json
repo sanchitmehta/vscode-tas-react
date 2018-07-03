@@ -6,8 +6,10 @@
   "scripts": {
     "start-client": "cd client && npm start",
     "start-server": "nodemon index.js",
-    "start": "concurrently --kill-others \"npm run start-server\" \"npm run start-client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-dev": "concurrently --kill-others \"npm run start-server\" \"npm run start-client\"",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
