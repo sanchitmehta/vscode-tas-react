@@ -16,7 +16,14 @@ app.get('/', (req, res) => {
 
 app.get('/api', (req, res) => {
   res.type('json');
-  res.end('{ "message": "Welcome to React on Azure" }');
+  res.end(
+    JSON.stringify({
+      gitUrl: process.env['APPSETTING_SITE_GIT_URL'],
+      bashGitUrl: process.env['APPSETTING_SITE_BASH_GIT_URL'],
+      expiry: process.env['APPSETTING_SITE_EXPIRY_UTC'],
+      host: process.env['HTTP_HOST']
+    })
+  );
 });
 
 // Create the HTTP server.
