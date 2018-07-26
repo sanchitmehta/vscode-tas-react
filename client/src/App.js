@@ -29,20 +29,20 @@ class App extends Component {
       <div className="App">
         <Hero endDate={this.state.expiry} host={this.state.host} />
         <div id="content">
-          <div class="column vsc">
-            <div class="icon">
+          <div className="column vsc">
+            <div className="icon">
               <img src={vscLogo} alt="VS Code" />
             </div>
-            <div class="text">
-              <p class="title">Start editing with VS Code</p>
-              <p class="description">
+            <div className="text">
+              <p className="title">Start editing with VS Code</p>
+              <p className="description">
                 VS Code can deploy applications directly to Azure with the Azure
                 App Service extension.
               </p>
-              <p class="link">
+              <p className="link">
                 <a href={this.cloneHref()}>Clone to VS Code</a>
               </p>
-              <p class="link">
+              <p className="link">
                 <a href={this.cloneInsidersHref()} id="clone-insiders">
                   Clone to VS Code Insiders
                 </a>
@@ -50,17 +50,17 @@ class App extends Component {
             </div>
           </div>
 
-          <div class="column git">
-            <div class="icon">
+          <div className="column git">
+            <div className="icon">
               <img src={gitLogo} alt="Git" />
             </div>
-            <div class="text">
-              <p class="title">Clone or push with Git</p>
-              <p class="description">
+            <div className="text">
+              <p className="title">Clone or push with Git</p>
+              <p className="description">
                 Review diffs, stage files, and make commits right from the
                 editor.
               </p>
-              <p class="link">
+              <p className="link">
                 <a
                   href="#"
                   onClick={this.toggleCreds.bind(this)}
