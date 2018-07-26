@@ -24,9 +24,23 @@ Next, start the front-end development server and back-end API server. From the p
 
 You now have a front-end development server running on port 3000. The Express API is running on port 3001. Webpack takes care of proxying requests from the front-end development server to your API server as needed.
 
-## Deploying to Azure
+## Deployment
 
-[Matt to fill in??]
+### Production Build
+
+```
+> npm run build
+```
+
+You may want to prune both the root and the client packages:
+
+```
+> npm prune --production && cd client && npm prune --production
+```
+
+### Deploying to Azure
+
+[Matt to fill in?]
 
 # Contributing
 
