@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import vscLogo from './images/vsc-logo.svg';
-import gitLogo from './images/git-logo.svg';
 import './App.css';
 import Hero from './Hero';
 class App extends Component {
@@ -13,7 +11,7 @@ class App extends Component {
     this.setState(body);
   }
 
-  renderCreds() {}
+  renderCreds() { }
   render() {
     let creds;
     if (this.state.showingCreds) {
@@ -27,53 +25,99 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Hero endDate={this.state.expiry} host={this.state.host} />
-        <div id="content">
-          <div className="column vsc">
-            <div className="icon">
-              <img src={vscLogo} alt="VS Code" />
-            </div>
-            <div className="text">
-              <p className="title">Start editing with VS Code</p>
-              <p className="description">
-                VS Code can deploy applications directly to Azure with the Azure
-                App Service extension.
-              </p>
-              <p className="link">
-                <a href={this.cloneHref()}>Clone to VS Code</a>
-              </p>
-              <p className="link">
-                <a href={this.cloneInsidersHref()} id="clone-insiders">
-                  Clone to VS Code Insiders
-                </a>
-              </p>
-            </div>
-          </div>
 
-          <div className="column git">
-            <div className="icon">
-              <img src={gitLogo} alt="Git" />
+        <Hero endDate={this.state.expiry} host={this.state.host} />
+
+        <div className="content-wrapper">
+          <div className="content">
+            <div className="column">
+              <div className="numberCircle">
+                1
+              </div>
+
+              <div>
+                <p className="title">Get the code</p>
+                <p> Clone the sources using Visual Studio Code or use git from the command line.</p>
+
+                <div>
+                  <p className="link">
+                    <a href={this.cloneHref()} id="clone">Clone with VS Code</a>
+                  </p>
+                </div>
+
+                <div>
+                  <p className="link">
+                    <a href={this.cloneInsidersHref()} id="clone-insiders">Clone with VS Code Insiders</a>
+                  </p>
+                </div>
+
+                <div>
+                  <p className="link">
+                    <a href="#" onClick={this.toggleCreds.bind(this)} id="show-creds">Generate your Git credentials</a>
+                  </p>
+                  {creds}
+                </div>
+              </div>
             </div>
-            <div className="text">
-              <p className="title">Clone or push with Git</p>
-              <p className="description">
-                Review diffs, stage files, and make commits right from the
-                editor.
-              </p>
-              <p className="link">
-                <a
-                  href="#"
-                  onClick={this.toggleCreds.bind(this)}
-                  id="show-creds"
-                >
-                  Generate your Git credentials
-                </a>
-              </p>
-              {creds}
+
+
+            <div className="column">
+              <div className="numberCircle">
+                2
+              </div>
+              <div>
+                <p className="title">Make some changes</p>
+                <p> Edit <span className="code">Hero.js</span>, run <span className="code">npm build && npm run start-dev</span> to run the application locally.</p>
+                <div>
+                  <p className="link">
+                    <a href="https://code.visualstudio.com/docs/editor/codebasics" target="_blank" rel="noopener noreferrer">Editing in VS Code</a>
+                  </p>
+                </div>
+                <div>
+                  <p className="link">
+                    <a href="https://code.visualstudio.com/docs/nodejs/nodejs-debugging" target="_blank" rel="noopener noreferrer">Node debugging in
+                  VS Code</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="column">
+              <div className="numberCircle">
+                3
+              </div>
+              <div>
+                <p className="title">Deploy your changes</p>
+                <p> Commit your changes, <span className="code">git push</span> to redploy, then refresh this page.</p>
+                <div>
+                  <p className="link">
+                    <a href="https://code.visualstudio.com/docs/editor/versioncontrol" target="_blank" rel="noopener noreferrer">Version
+                  control in VS Code</a>
+                  </p>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
+        <div>
+          <div className="content2">
+            <div className="column centered empty"></div>
+            <div className="column centered">
+              <div className="centered">
+                <a href="https://code.visualstudio.com/tutorials/app-service-extension/getting-started" target="_blank" rel="noopener noreferrer">
+                  <button className="continue-btn" type="button">
+                    CONTINUE WALKTHROUGH >
+              </button>
+                </a>
+              </div>
+            </div>
+            <div className="column centered empty"></div>
+          </div>
+        </div>
+
+      </div>  //App
     );
   }
 

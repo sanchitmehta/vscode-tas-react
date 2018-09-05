@@ -14,18 +14,12 @@ export default class Hero extends Component {
     return (
       <div id="hero">
         <p className="countdown">
-          This free web app will expire in
-          <strong> {this.state.remainingTime}</strong>
+          This <strong>free</strong> web application will expire in <strong>{this.state.remainingTime}</strong> minutes...
         </p>
         <img src={nodeLogo} alt="Azure App Service" />
-        <h1>Welcome to React on Azure App Service</h1>
-        <h2>
-          Hosted at <a href={this.props.host}>{this.props.host}</a>
-        </h2>
-        <p>
-          To get started, make changes to your web app using the options below
-          and redeploy to see your changes.
-        </p>
+        <h1>Welcome to Azure!</h1>
+        <p>This is a simple Node application using the popular <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> framework, hosted on Azure App Service at <a href={this.props.host}>{this.props.host}</a></p>
+        <p>To get started, follow the instructions below or jump straight to the <a href="https://code.visualstudio.com/tutorials/app-service-extension/getting-started" targe="_blank" rel="noopener noreferrer">walkthrough</a>.</p>
       </div>
     );
   }
@@ -53,7 +47,7 @@ function timeTo(ts) {
   }
   const t = Date.parse(ts + ' UTC') - Date.parse(new Date());
   const minutes = Math.floor(t / 1000 / 60);
-  const seconds = (t - minutes * 60 * 1000) / 1000;
+  // const seconds = (t - minutes * 60 * 1000) / 1000;
 
-  return `${minutes} min ${seconds} sec`;
+  return `${minutes}`; // min ${seconds} sec`;
 }
