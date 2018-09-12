@@ -6,7 +6,21 @@ class App extends Component {
     showingCreds: false
   };
   async componentDidMount() {
-    const res = await fetch('/api');
+    // const res = await fetch('/api');
+
+
+    const token = window.location.href.split("/")[window.location.href.split("/").length-1];
+
+
+    const res = await fetch('/api', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      body: JSON.stringify({token: token})
+    });
+
+
     const body = await res.json();
     this.setState(body);
   }
