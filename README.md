@@ -1,6 +1,9 @@
 # Getting Started
 
-This application is a canonical React application generated with `create-react-app`. The client code is under the `client` folder. The server code is in `index.js`. It is designed to work well with [Visual Studio Code](https://code.visualstudio.com) and to be easily deployed to [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/), Azure's fully-managed Platform as a Service (PaaS) that let's you deploy and scale web, mobile, and API apps. 
+This application is a canonical React application generated with `create-react-app`. The client code is under the `client` folder. The server code is in `index.js`. It is designed to work well with [Visual Studio Code](https://code.visualstudio.com) and to be easily deployed to [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/), Azure's fully-managed Platform as a Service (PaaS) that let's you deploy and scale web, mobile, and API apps.
+
+
+
 
 ## Getting the Code
 
